@@ -47,6 +47,7 @@ set(SOURCES
 add_definitions(-DLODEPNG_NO_COMPILE_DECODER)
 
 add_executable(fontbm ${SOURCES})
+target_link_libraries(fontbm -lfreetype)
 target_link_libraries(fontbm ${COMMON_LIBRARIES} ${FREETYPE_LIBRARIES})
 
 add_executable(unit_tests
